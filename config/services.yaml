@@ -21,5 +21,9 @@ services:
             - '../src/Kernel.php'
             - '../src/Tests/'
 
+    App\UserlandTransport\UserlandTransportFactory:
+        parent: notifier.transport_factory.abstract
+        tags: ['chatter.transport_factory']
+
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
